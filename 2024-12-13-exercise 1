@@ -1,0 +1,21 @@
+# exercise 1
+
+a = int(input("enter number a:"))
+b = int(input("enter  number b:"))
+c = int(input("enter number c:"))
+if a > b:
+    print(f"a > b: {a > b}")
+if a < b:
+    print(f"a < b: {a < b}")
+
+if a == b:
+    print(f"a == b {a == b}")
+else:
+    if a >= b:
+        print(f"  a >= b : {a >= b}")
+    if a <= b:
+        print(f"  a <= b : {a <= b}")
+    if a != b:
+        print(f"  a != b : {a != b}")
+if a > b and b > c:
+    print(f" a > b and b > c : {a > c}")

@@ -6,7 +6,7 @@ if d >= "2024.12.24" and d <= "2025.01.02":
     exit()
 
 if d >= "2024.04.18" and d <= "2024.04.21":
-    print(f"This day belongs to Easter vacation : {d}")
+
     exit()
 if d > "2024.08.08" and d <= "2024.08.19":
     print(f"This day belongs to summer vacation : {d}")

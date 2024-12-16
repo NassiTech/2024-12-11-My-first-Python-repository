@@ -1,7 +1,5 @@
 # 2024-12-16- define mathematical functions to make simple operations
 # simulate a calculator function with interactive questions to the user.
-
-
 def add(x, y):
     return x + y
 
@@ -18,27 +16,29 @@ def div(x, y):
     return x / y
 
 
-def calculator():
-    op = input(f"operation (+ , - , * , /) ? ")
+def calculator(op):
+
     if op == "+":
-        print(add(x, y))
+        return add(x, y)
 
     if op == "-":
-        print(substract(x, y))
+        return substract(x, y)
 
     if op == "*":
-        print(mult(x, y))
+        return mult(x, y)
 
     if op == "/":
-        print(div(x, y))
+        return div(x, y)
+
     if not (op in ["+", "*", "-", "/"]):
         print(f"something went wrong! Focus!")
 
 
-#####################################################################
-# Here starts the main part of the programm.
+######################################################################################
+# The main part of the programm starts here
 
 x = float(input(f"x :"))
 y = float(input(f"y :"))
 
-calculator()
+op = input(f"operation (+ , - , * , /) ? ")
+print(calculator(op))

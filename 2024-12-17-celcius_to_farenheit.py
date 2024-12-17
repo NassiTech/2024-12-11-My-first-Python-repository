@@ -8,8 +8,5 @@ def F(C):
     return C * 9 / 5 + 32
 
 
-# C == 5 / 9 * (F - 32)
-
-
 C = float(input(f"Temperature (C): "))
 print(f"Temperature (F): ", F(C))

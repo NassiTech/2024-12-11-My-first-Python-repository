@@ -9,24 +9,26 @@ import random
 
 list = ["Schere", "Stein", "Papier"]
 
+while True:
+    user_choice = input("Your choice? ")
+    if not (user_choice in list):
+        print(f"Input {user_choice} not allowed!")
+        exit()
 
-user_choise = input("Your choice? ")
-if not (user_choise in list):
-    print(f"Input {user_choise} not allowed!")
-    exit()
+    comp_choice = random.choice(list)
 
-comp_choise = random.choice(list)
+    print(f"Computer choice: {comp_choice}")
 
-print(f"Computer choice: {comp_choise}")
+    if user_choice == comp_choice:
+        print(f"Undecided!")
 
-if user_choise == comp_choise:
-    print(f"Undecided!")
-else:
-    if (
-        (user_choise == "Schere" and comp_choise == "Papier")
-        or (user_choise == "Stein" and comp_choise == "Schere")
-        or (user_choise == "Papier" and comp_choise == "Stein")
-    ):
-        print(f"You win!")
     else:
-        print(f"Computer wins!")
+        if (
+            (user_choice == "Schere" and comp_choice == "Papier")
+            or (user_choice == "Stein" and comp_choice == "Schere")
+            or (user_choice == "Papier" and comp_choice == "Stein")
+        ):
+            print(f"You won!")
+        else:
+            print(f"Computer won!")
+        break

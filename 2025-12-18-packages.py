@@ -1,10 +1,14 @@
 # Try to look for packages data.time
 # vacation calendar
+from datetime import datetime
 
-import datetime.("year","month","day")
-
+date = datetime(2024, 12, 18)
+print(date)
+# date_str = "2024-12-18"
+# date = datetime.datetime(2024,12,18)
+# date.time.strptime(date_str,"%y-%m-%d")
 x = datetime.date()
-
+datetime.strptime
 # ferien_winter_start = datetime.date(2024, 12, 24)
 # Wichtigste Funktionen und Klassen von datetime:
 # datetime.date: Diese Klasse repräsentiert ein Datum (Jahr, Monat, Tag).

@@ -106,10 +106,10 @@ print("\n")
 # print("\n")
 
 
-# ###############     new version from zero from 3. User defined date   ##############################
+# ###############     new version -> start from zero from 3. User defined date   ##############################
 
 
-# days_to_keydate is a function that calculates the number of days from today to an user entered date
+# days_to_keydate is a function that calculates the number of days (between two days) ex: from today to an user entered date Link :
 # the input parameter (selected_day).
 # The function gives a return parameter Difference today - selected_day
 # the user is asked to enter a date through input()
@@ -130,13 +130,15 @@ print(f"{days_to_keyday}: ")
 # line 123 in the print after the argument days_to_keyday
 
 
-################## new version of 4. Calculate day of week   ##############################
+################## new version of 4.-> start from zero Calculate day of week   ##############################
 # day_of_the_week() is a function that compares the user entered date with calendar function
 # the input parameter entered-day is transformed from a string to a datetime format with strptime
 # the asked day is transformed from the datetime format again to string format strftime -> %A weekday
 # the return value is a week day as a string type data
-
-
+# day of the week link : https://stackoverflow.com/questions/36341484/get-day-name-from-weekday-int
+# https://stackoverflow.com/questions/8380389/get-day-name-from-datetime
+# https://stackoverflow.com/questions/8380389/get-day-name-from-datetime
+# https://stackoverflow.com/questions/74853453/days-till-year-end
 def day_of_the_week():
     today = datetime.now()
     user_date_str = input("enter a date format DD.MM.YYYY:")

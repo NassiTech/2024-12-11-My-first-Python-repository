@@ -16,6 +16,7 @@ z = 0
 for n in i:
     if n % 2 != 0:
         sum = sum + int(n)
+# we can use n because integer is already defined earlier
         z = z + 1
 
 print(f"the summ is = {sum} \nthe number of odd numbers is {z}")

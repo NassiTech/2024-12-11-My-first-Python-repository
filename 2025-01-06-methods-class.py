@@ -1,3 +1,4 @@
+# Method is in a class bound
 class Calculator:
     def add(self, a, b):
         return a + b

@@ -1,10 +1,17 @@
 import requests
-user_input = input("Enter your city" )
-response = requests.get("http://wttr.in/berlin?format = j1")
+
+user_input = input("Enter your city? ")
+response = requests.get("http://wttr.in/" + user_input + "?format=j1")
 data = response.json()
-temperature = data["current_conditions"][0]["temp_C"]
-feelslike_temoerature = data["current_conditions"][0]["feelslike_temp_C"]
-weather = data["current_conditions"][0]["weatherDesc"][0]["value"]
-location = data["nearest_area"][0]["area_name"][0]["value"]
-print(weather)
-print(f"the weather in berlin is {weather} witrn {temperature} in °C" feels like {feels_like_temp_C} in °C )
+
+
+temperature = data["current_condition"][0]["temp_C"]
+feelslike_temperature = data["current_condition"][0]["FeelsLikeC"]
+weather = data["current_condition"][0]["weatherDesc"][0]["value"]
+location = data["nearest_area"][0]["areaName"][0]["value"]
+
+# print(weather)
+
+print(
+    f"the weather in {location} is {weather} with {temperature} in °C and feels like {feelslike_temperature} in °C"
+)

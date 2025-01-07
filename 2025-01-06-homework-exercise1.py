@@ -3,7 +3,7 @@
 # enter the text
 user_input = "Là où nous vivions jadis, il n y avait ni autos, ni taxis, ni autobus"
 # select the letter to be counted
-character = "i"
+character = "e"
 # we use method count
 count = user_input.count(character)
 count = 0

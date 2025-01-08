@@ -1,0 +1,103 @@
+# crreate a classs to describe a pet with following functionalities
+## attributes
+
+# name(name of the pet ex: Bello)
+# species(sort of animal)
+# age(in years)
+# favorite_food ( ex: bones)
+# energy_level(energy level of the pet, standard value = 100)
+
+## methods
+# get_description(describe the pet : ma pet is a 5 years old dog)
+# play(duration) : simulate the pet playing. it looses energy based on the duration of play.
+# Its energy drops by 5 pts per minute but should not reach 0
+# ex:10 min play = 10 * 5 pts = 50 pts
+# feed(food) feed the pet. When the food is favorite_food the pet gets 30 pts energy bonus.
+# Other normal food brings 10 pts energy bonus
+# the energy level can go up to 100 pts
+# Bonus:
+# füge eine Methode sleep(hours) hinzu, die die Energie des Haustiers pro
+# geschlafener Stunde um 20 Punkte erhöht (maximal bis 100%)
+
+# Beispiel für die Ausgabe:
+
+# Wenn deine Klasse korrekt implementiert ist, könnte die Ausgabe so aussehen:
+# ● Mimi ist eine 3 Jahre alte Katze.
+# ● Mimi hat 15 Minuten gespielt und hat jetzt 25% Energie.
+# ● Mimi liebt Fisch! Die Energie ist jetzt 55%.
+# ● Mimi hat Trockenfutter gegessen. Die Energie ist jetzt 65%.
+
+
+class Pets:
+    def __init__(self, name, species_name, age, favorite_food):
+        self.name = name
+        self.species_name = species_name
+        self.age = age
+        self.favorite_food = favorite_food
+        self.energy_level = 100
+
+    def get_description(self):
+        print(
+            f"my{self.species_name} {self.name} is {self.age} years old and has {self.energy_level} energy points "
+        )
+
+    def play(self, minutes):
+        self.energy_level = self.energy_level - 5 * minutes
+        if self.energy_level < 1:
+            self.energy_level = 1
+            print(f"I am too tired to play!")
+
+    def feed(self, food):
+        if food == self.favorite_food:
+            self.energy_level = self.energy_level + 30
+            print(f"{self.name} really likes {self.favorite_food} !")
+        else:
+            self.energy_level = self.energy_level + 10
+
+        if self.energy_level > 100:
+            self.energy_level = 100
+            print(f"{self.name}is full of energy and has to move! ")
+
+    # Bonus
+    def sleep(self, hour):
+        energy_bonus = 20 * hour
+        new_energy_level = self.energy_level + energy_bonus
+
+        if new_energy_level >= 100:
+            self.energy_level = 100
+            print(f"{self.name} is fit and won't sleep ")
+
+        else:
+            self.energy_level = new_energy_level
+            print(f"{self.name}'s new energy_level is self.energy_level ")
+
+
+# print(f"my{self.species_name} {self.name} is {self.age} years old ")
+
+mimi = Pets("mimi", "shecat", 3, "tuna")
+
+print("\n")
+
+mimi.get_description()
+mimi.play(15)
+mimi.get_description()
+mimi.feed("tuna")
+mimi.get_description()
+mimi.feed("kitekat")
+mimi.get_description()
+mimi.sleep(3)
+mimi.get_description()
+
+print("\n")
+
+minou = Pets("minou", "hecat", 3, "sardines")
+
+minou.get_description()
+minou.play(20)
+minou.get_description()
+minou.feed("sardines")
+minou.get_description()
+minou.feed("whiskas")
+minou.get_description()
+minou.sleep(5)
+minou.get_description()

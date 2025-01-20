@@ -64,8 +64,6 @@ def support():
 
 
 # greet-Route  using parameters
-
-
 @app.route("/greet/<name>")
 def greet(name):
     return f"Hallo {name}, willkommen auf meiner Flask-API!"

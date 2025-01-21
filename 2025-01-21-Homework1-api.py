@@ -8,23 +8,8 @@ def home():
     return "Welcome to my Flask framework"
 
 
-# @app.route("/item/<product_id>", methods=["GET"])
-# def get_item(product_id):
-# color = request.args.get("color")  # /item/2?color=black
-# size = request.args.get("size")  # /item/2?size=M
-# /item/2?color=black&size=M
-# return f"Welcome Mamazon's item {product_id} with the color {color} an with the size {size}"
-
-
-# @app.route("/brand", methods=["GET"])
-# def get_default_brand_page(default_brand_page):
-# Should return a welcome to brand page text
-#   return f"Welcome to brand page {default_brand_page}"
-
-
 @app.route("/brand/<brand_id>", methods=["GET"])
 def get_brand_by_id(brand_id):
-    # Should return  welcome to specific brand page text with id 10
 
     # E.g. Welcome to brand and the type is clothes
     type = request.args.get("type")

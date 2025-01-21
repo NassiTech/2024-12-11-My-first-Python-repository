@@ -19,7 +19,7 @@ def get_item(product_id):
 @app.route("/brand", methods=["GET"])
 def get_mamazon_default_brand_page():
     # Should return a welcome to brand page text
-    return f"Welcome to brand page {brand_page}"
+    return f"Welcome to brand page {brand_by_id}"
 
 
 @app.route("/brand/<brand_id>", methods=["GET"])

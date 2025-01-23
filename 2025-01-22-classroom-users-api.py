@@ -10,10 +10,10 @@ def get_user_id(user_id):
 
     for user in users:
         if user["id"] == user_id:
-            return final_user
+            final_user = user
     if final_user == None:
         return "User not found"
-    return f"the final_user is {final_user}"
+    return f"the user is {final_user}"
 
 
 @app.route("/users/login/", methods=["POST"])

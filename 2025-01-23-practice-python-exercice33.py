@@ -1,7 +1,7 @@
 # https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html
 
 # Welcome to birthday dictionary
-# version 2 : eimport data list
+# version 2 : import data list
 # from data.birthday_dictionary import name
 # version 1 list/ dictionary in the body
 # birthday_dictionary = [
@@ -51,8 +51,4 @@ file = open("birthday_dictionary.json", "w")
 json.dump(birthday_dictionary, file)
 file.close()
 
-print()
 
-# if __name__ == "__main__":
-# nextId = max([p["id"] for p in users], default=0) + 1
-#     new_user["id"] = nextId

@@ -13,7 +13,6 @@
 # from data.birthday_dictionary import birthday_dictionary
 # exercise 34 with json
 
-
 from flask import json
 
 # load the user list from json file:

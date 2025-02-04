@@ -6,7 +6,7 @@
 
 n = int(input("Enter a number? "))
 print(
-    f"Here is the result for the number n of Fibonacci numbers you want ro generate ", n
+    f"Here is the result for the number  of Fibonacci numbers you want ro generate ", n
 )
 x = 0
 y = 1
